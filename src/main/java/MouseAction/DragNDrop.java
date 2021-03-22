@@ -1,4 +1,4 @@
-package Action;
+package MouseAction;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

@@ -18,17 +18,16 @@ public class CopyPaste {
 
         Actions action = new Actions(driver);
 
-        WebElement s = driver.findElement(By.name("q"));
-        s.sendKeys("Blancos Khim" + Keys.ENTER);
-
         // search over another result
-        WebElement field1 = driver.findElement(By.xpath("//*[@id=\"dropZone\"]/div[2]/div"));
+        WebElement field1 = driver.findElement(By.xpath("//*[@id=\"dropZone\"]/div[2]/div/div[6]/div[1]/div/div/div/div[5]"));
         WebElement field2 = driver.findElement(By.xpath("//*[@id=\"dropZone2\"]/div[2]/div/div[6]"));
 
         action.keyDown(field1, Keys.CONTROL).sendKeys("a").sendKeys("c").perform(); // click in the search box and select everything
+        Thread.sleep(2000);
         action.keyDown(field2, Keys.CONTROL).sendKeys("a").sendKeys("v").perform(); // click in the search box and select everything
+        Thread.sleep(2000);
 
-        Thread.sleep(1200);
+        Thread.sleep(2000);
         driver.quit();
     }
 }

@@ -2,7 +2,6 @@ package MouseAction;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
 
 public class Scrollbar {
     public static void main(String[] args) throws InterruptedException {
@@ -23,8 +22,8 @@ public class Scrollbar {
 
         // scroll to end
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-
         Thread.sleep(2000);
+
         driver.quit();
     }
 }
